@@ -1,0 +1,8 @@
+[package]
+name = "merkle"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+digest = "0.10.7"
+sha2 = "0.10.9"
