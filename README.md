@@ -4,18 +4,18 @@ A merkle tree implementation in Rust. The routines use a flat in-order binary tr
 
 This project is still in progress.
 
-## Examples
+## Example
 
 ```rust
 type Tree = MerkleTree<Sha256, 32, 64>;
 
 let mut tree = Tree::new();
 
-tree.add(&[0x01])?;
-tree.add(&[0x02])?;
-tree.add(&[0x03])?;
-tree.add(&[0x04])?;
-tree.add(&[0x05])?;
+tree.add(&[0x01]).unwrap();
+tree.add(&[0x02]).unwrap();
+tree.add(&[0x03]).unwrap();
+tree.add(&[0x04]).unwrap();
+tree.add(&[0x05]).unwrap();
 
 let root = tree.root().unwrap();
 let proof = tree.create_proof(&[0x04]).unwrap();
